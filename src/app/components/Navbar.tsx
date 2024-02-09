@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" href="\">
                     Home
                 </Link>
-                <Link className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" href="\">
+                <Link className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" href="https://www.h20resilience.com">
                     About
                 </Link>
                 <Link className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100" href="\Landuse">
