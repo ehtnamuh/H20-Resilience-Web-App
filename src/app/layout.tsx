@@ -2,6 +2,15 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
+
+function Footer() {
+  return (
+    <footer className="bg-gray-200 dark:bg-gray-700 px-6 py-4">
+      <Contact />
+    </footer>
+  )
+}
 
 // const inter = Inter({ subsets: ['latin'] })
 const inter = Inter({
@@ -10,8 +19,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'H20 Resilience',
-  description: 'Flood risk assessment and mitigation',
+  title: 'Samin Bin Karim | Portfolio',
+  description: 'Personal Portfolio of Samin Bin Karim',
+  keywords: ['Samin Bin Karim', 'Portfolio', 'Controls Engineer', 'Machine Learning Engineer', 'Software Engineer'],
+  icons: {
+    icon: '/favicon.ico', // Adjust the path if your icon is elsewhere
+  },
 }
 
 export default function RootLayout({
@@ -21,10 +34,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <div className="flex-grow">
+      <body className={inter.className}>
+        <div className="flex flex-col min-h-screen">
           <Navbar />
-          {children}
+          <main className="flex-grow">
+            {children}
+          </main>
         </div>
+      </body>
     </html>
   )
 }
